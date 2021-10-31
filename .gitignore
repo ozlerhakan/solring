@@ -1,3 +1,4 @@
 .pytest_cache
 dist
-pelikan.egg-info
+solring.egg-info
+build
