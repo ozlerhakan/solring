@@ -15,7 +15,7 @@ class Solring:
         self.qt = qt
         self.core = core
 
-    def execute(self, params, output, save_format):
+    def execute(self, params: dict, output: str, save_format: str):
         solr_connection = solr.Solr(f"{self.url + '/solr/' + self.core}",
                                     persistent=False,
                                     timeout=360,
@@ -29,7 +29,7 @@ class Solring:
 
         assert response is not None, "response is None"
 
-        file_name = f'{output}.{save_format}'
+        file_name = f"{output}.{save_format}"
         DataFrame(response.results).to_csv(path_or_buf=file_name, index=False)
 
 
