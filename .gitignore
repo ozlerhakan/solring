@@ -2,3 +2,5 @@
 dist
 solring.egg-info
 build
+*.txt
+*.csv
